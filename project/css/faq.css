@@ -4,14 +4,25 @@ body {
     color: #f5f6f7;
 }
 p {font-size: 16px;}
+
 .margin {margin-bottom: 45px;}
+
 .bg-1 {
     background-color:rgb(38, 160, 218);  /* Unify Blue */
     color: #ffffff;
 }
 .bg-2 {
-    background-color: #474e5d; /* Dark Blue */
+    background-color: #474e5d; /* Dark Blue  tambien podemos usar rgb(38, 160, 218) */
     color: #ffffff;
+}
+.logo {
+  float: left;
+}
+.rompebolas {
+  Display: flex;
+Justify-content: center;
+Align-items: center;
+position: relative;
 }
 
 .bg-3 {
