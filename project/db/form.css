@@ -1,5 +1,10 @@
 <style type="text/css">
-/*dd*/
+body {
+  width:100px;
+	height:100px;
+  background:         linear-gradient(90deg, #1a50bc 10%, #1a8bbc 90%); 
+  font-family: 'Raleway', sans-serif;
+}
 .form-style-5{
     max-width: 500px;
     padding: 10px 20px;
@@ -8,7 +13,7 @@
     padding: 20px;
     background: #f4f7f8;
     border-radius: 8px;
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-family: 'Raleway', sans-serif;
 }
 .form-style-5 fieldset{
     border: none;
@@ -31,7 +36,7 @@
 .form-style-5 input[type="url"],
 .form-style-5 textarea,
 .form-style-5 select {
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-family: 'Raleway', sans-serif;
     background: rgba(255,255,255,.1);
     border: none;
     border-radius: 4px;
@@ -67,7 +72,7 @@
     height:35px;
 }
 .form-style-5 .number {
-    background: rgb(38, 160, 218);
+    background: #1a5abc;
     color: #fff;
     height: 30px;
     width: 30px;
@@ -88,18 +93,42 @@
     padding: 19px 39px 18px 39px;
     color: #FFF;
     margin: 0 auto;
-    background: rgb(38, 160, 218);
+    background: #1a1abc;
     font-size: 18px;
     text-align: center;
     font-style: normal;
     width: 100%;
-    border: 1px solid rgb(38, 160, 255);
+    border: 1px solid  #1a5abc;
     border-width: 1px 1px 3px;
     margin-bottom: 10px;
 }
 .form-style-5 input[type="submit"]:hover,
 .form-style-5 input[type="button"]:hover
 {
-    background: rgb(38, 113, 218);
+    background: #1a5abc;
 }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
 </style>
