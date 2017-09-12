@@ -6,8 +6,8 @@ body {
 p {font-size: 16px;}
 .margin {margin-bottom: 45px;}
 .bg-1 {
-    background-color:rgb(38, 160, 218);  /* Unify Blue */
-    color: #ffffff;
+    background: url('../images/fondo.jpg') fixed;
+    background-size: cover;
 }
 .bg-2 {
     background-color: #474e5d; /* Dark Blue */
