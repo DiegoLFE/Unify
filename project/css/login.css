@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-@charset "UTF-8";
-body {
-    width:100px;
-	height:100px;
-  background:         linear-gradient(90deg, #1a50bc 10%, #1a8bbc 90%);
-font-family: 'Raleway', sans-serif;
-=======
 body
 {
     background: url('../images/fondo.jpg') fixed;
@@ -16,7 +8,6 @@ body
     line-height: 1.8;
     color: #f5f6f7;
     text-align: center;
->>>>>>> ee76a31f72279fdf629eeaa53a066f2cb21a5641
 }
 
 p {
