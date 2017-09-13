@@ -126,3 +126,6 @@ p {font-size: 16px;}
 {
     background: #1a5abc;
 }
+.logo *{
+  margin-top: 10px;
+}
