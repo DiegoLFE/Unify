@@ -12,7 +12,7 @@
   </head>
   <body>
     <nav class="navbar navbar-default">
-      <div class="container">
+      <div class="contenedor">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
             <span class="icon-bar"></span>
@@ -37,21 +37,11 @@
       <div class="form-style-5">
       <form>
           <fieldset>
-              <legend><span class="number">1</span> e-Commerce Info</legend>
+              <legend><span class="number">1</span> Register</legend>
               <input type="text" name="field1" placeholder="Nombre del e-Commerce *">
               <input type="email" name="field2" placeholder="Email de contacto *">
               <input type="text" name="field3" placeholder="Contraseña *">
               <input type="text" name="field4" placeholder="Repetir Contraseña *">
-              <input type="text" name="field5" placeholder="Telefono de contacto *">
-              <input type="text" name="field6" placeholder="Provincia *">
-              <input type="text" name="field7" placeholder="Ciudad *">
-              <input type="text" name="field8" placeholder="Direccion principal *">
-              <textarea name="field3" placeholder="Breve descripcion de la sucursal"></textarea>
-              <label for="job">Tipo de contribuyente</label>
-          </fieldset>
-          <fieldset>
-            <legend><span class="number">2</span> Sucursales</legend>
-            <textarea name="field3" placeholder="Direccion y email de contacto de cada sucursal"></textarea>
           </fieldset>
         <input type="submit" value="Apply" />
       </form>
