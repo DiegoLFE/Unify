@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../css/faq.css">
+    <link rel="stylesheet" href="css/faq.css">
   </head>
   <body>
     <div class="contenedor">
@@ -22,16 +22,16 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="login.html">Log in</a></li>
-            <li><a href="registro.html">Register</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="login.php">Log in</a></li>
+            <li><a href="registro.php">Register</a></li>
           </ul>
         </div>
       </nav>
       <div class="container-fluid bg-2 text-center rompebolas" >
         <h3 class="" >.</h3>
         <div class="logo"  style="position: absolute;">
-          <img src="../images/logo.png" class="img-responsive img-circle margin " style="display:inline " alt="Bird" width="350" height="350">
+          <img src="images/logo.png" class="img-responsive img-circle margin " style="display:inline " alt="Bird" width="350" height="350">
         </div>
       </div>
       <div class="container-fluid bg-3 text-center">
@@ -89,7 +89,7 @@
                 <div class="panel panel-default ">
                   <div class="panel-heading accordion-toggle collapsed question-toggle" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question4">
                     <h4 class="panel-title">
-                      <a href="#" class="ing">Q: How can I make a suggestion? </a>
+                      <a class="ing">Q: How can I make a suggestion? </a>
                     </h4>
                   </div>
                   <div id="question4" class="panel-collapse collapse" style="height: 0px;">

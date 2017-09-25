@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="css/login.css">
   </head>
   <body>
     <div class="contenedor">
@@ -22,15 +22,15 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="registro.html">Registro</a></li>
-            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="registro.php">Registro</a></li>
+            <li><a href="faq.php">FAQ</a></li>
           </ul>
         </div>
       </nav>
       <div class="logo">
         <a href="home.html">
-          <img src="../images/logo.png" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="250" height="250">
+          <img src="images/logo.png" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="250" height="250">
         </a>
       </div>
       <div class="row rompebolas">

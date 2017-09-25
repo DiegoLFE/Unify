@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
     <div class="contenedor">
@@ -22,15 +22,15 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="login.html">Log in</a></li>
-            <li><a href="registro.html">Register</a></li>
-            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="login.php">Log in</a></li>
+            <li><a href="registro.php">Register</a></li>
+            <li><a href="faq.php">FAQ</a></li>
           </ul>
         </div>
       </nav>
       <div class="container-fluid bg-1 text-center">
         <h3 class="margin">Welcome to:</h3>
-          <img src="../images/logosinborde.png" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
+          <img src="images/logosinborde.png" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
         <h3>Uniting e-Commerces socially</h3>
       </div>
       <div class="container-fluid bg-2 text-center">
@@ -43,17 +43,17 @@
           <div class="col-sm-4">
             <h3>Platform</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <img src="../images/platform.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+            <img src="images/platform.jpg" class="img-responsive margin" style="width:100%" alt="Image">
           </div>
           <div class="col-sm-4">
             <h3>Easy access for costumers</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <img src="../images/costumers.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+            <img src="images/costumers.jpg" class="img-responsive margin" style="width:100%" alt="Image">
           </div>
           <div class="col-sm-4">
             <h3>Friendly Enviroment</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <img src="../images/friendly.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+            <img src="images/friendly.jpg" class="img-responsive margin" style="width:100%" alt="Image">
           </div>
         </div>
       </div>
