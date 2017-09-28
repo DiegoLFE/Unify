@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+$nombre = $_SESSION['inputsValues']['nombre'] ?? '';
+$email = $_SESSION['inputsValues']['email'] ?? '';
+$password = $_SESSION['inputsValues']['password'] ?? '';
+
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -11,6 +20,18 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body>
+    <?php if (!empty($_SESSION['errores'])): ?>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-danger">
+                    <?php foreach ($_SESSION['errores'] as $value): ?>
+                        <p><?php echo $value; ?></p>
+                    <?php endforeach ?>
+                </div>
+            </div>
+        </div>
+    <?php endif ?>
+
     <nav class="navbar navbar-default">
       <div class="contenedor">
         <div class="navbar-header">
@@ -30,20 +51,41 @@
       </div>
     </nav>
         <div class="logo">
-            <a href="home.html">
+            <a href="index.php">
             <img src="images/logo.png" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="250" height="250">
           </a>
         </div>
       <div class="form-style-5">
-      <form>
+      <form action="controllers/registro.controller.php" enctype="multipart/form-data" method="post" novalidate>
           <fieldset>
               <legend><span class="number">1</span> Register</legend>
-              <input type="text" name="field1" placeholder="Nombre del e-Commerce *">
-              <input type="email" name="field2" placeholder="Email de contacto *">
-              <input type="text" name="field3" placeholder="Contraseña *">
-              <input type="text" name="field4" placeholder="Repetir Contraseña *">
+
+              <div class="form-group">
+
+                  <input type="text" class="form-control" placeholder="Nombre Completo" name="nombre" id="nombre" value="" />
+                  <span class="help-block"></span>
+              </div>
+
+              <div class="form-group">
+
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Email" value="" />
+                  <span class="help-block"></span>
+              </div>
+
+              <div class="form-group">
+
+                  <input type="password" class="form-control" name="password" placeholder="Contraseña" id="password" value="" />
+                  <span class="help-block"></span>
+              </div>
+
+              <div class="form-group">
+
+                  <input type="file" class="form-control" name="avatar" id="avatar" value="" />
+                  <span class="help-block"></span>
+              </div>
+
           </fieldset>
-        <input type="submit" value="Apply" />
+        <button type="submit" class="btn btn-default">Enviar</button>
       </form>
     </div>
   </body>

@@ -1,3 +1,7 @@
+<?php
+  var_dump ($_SESSION['logged'])
+ ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -19,6 +23,9 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
+          <?php if (!empty($_SESSION['logged'])) { ?>
+            <a class="navbar-brand" href="#"> <?php echo $_SESSION['user'] ?> </a>
+          <?php } ?>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
@@ -29,7 +36,7 @@
         </div>
       </nav>
       <div class="logo">
-        <a href="home.html">
+        <a href="index.php">
           <img src="images/logo.png" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="250" height="250">
         </a>
       </div>
@@ -45,7 +52,7 @@
           <div class="wrap">
               <p class="form-title">Sign In</p>
             <form class="login">
-                <input type="text" placeholder="Username" />
+                <input type="text" placeholder="Email" />
                 <input type="password" placeholder="Password" />
                 <input type="submit" value="Sign In" class="btn btn-success btn-sm" />
               <div class="remember-forgot">
