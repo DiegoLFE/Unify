@@ -1,5 +1,50 @@
 <?php
-  var_dump ($_SESSION['logged'])
+  var_dump ($_SESSION['logged']);
+
+  function estaLogueado() {
+    if (isset($_SESSION["usuario"])) {
+      return true;
+    }
+    return false;
+  }
+
+
+  $_SESSION["usuario"]
+
+$_SESSION["usuario"] = $_COOKIE["usuario"]
+
+
+  $_COOKIE["usuario"]
+
+/*
+PASOS A SEGUIR: POR NICO
+
+1 - Levantar todos los usuarios del json y convertirlos a array
+file get contents
+decode json
+2 - Revisar que el mail ingresado existe para seguir a validar la contraseña
+
+foreach ($variable as $key => $value) {
+  if($value["email"] == $mailpasadoporpost) {
+
+}
+}
+
+3 - Si el mail ingresado existe, validar la contraseña usando password_verify
+password_verify("passwordingresadoporelusuarioenpost", "passwordhasheadodeladb"); true o false
+
+4 - true - Generan la session con los datos que quieran (recomendación: usuario, contraseña)
+NO SE OLVIDEN DE PONER SESSION_START() EN CADA PÁGINA
+4 - false - error, hearthstone se abre con todo el volumen en clase, WELCOME BACK
+
+5 - Si el usuario marcó la opción de recordarme -> crear la cookie con los mismos datos que la session
+
+6 - Checkear en cada página si la cookie existe y la session NO existe, si es así, volver a generar la session con los datos de la cookie
+
+7 - Botón de deslogueo
+  session_destroy()
+  setcookie("nombredecookie", "", time()-1);
+*/
  ?>
 
 <!DOCTYPE html>
