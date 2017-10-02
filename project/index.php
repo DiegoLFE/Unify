@@ -1,3 +1,26 @@
+<?php
+
+if (isset($_COOKIE)) {
+  session_start();
+  foreach ($_COOKIE as $key => $value) {
+    $_SESSION["$key"] = "$value";
+  }
+} else {
+  session_start();
+}
+
+if (isset($_SESSION['error'])) {
+  $_SESSION["error"] = null;
+}
+if (isset($_SESSION['errores'])) {
+ $_SESSION["errores"] = null;
+}
+if (isset($_SESSION['inputsValues'])) {
+  $_SESSION['inputsValues'] = null;
+}
+
+ ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -19,12 +42,20 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
+          <?php if (isset($_SESSION['nombre'])) { ?>
+            <a class="navbar-brand" ><?php echo "Hola,". $_SESSION['nombre']."!"; ?></a>
+        <?php } ?>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
+            <?php if (isset($_SESSION['nombre'])) { ?>
+                <li><a href="faq.php">FAQ</a></li>
+            <li><a href="controllers/logout.controller.php">Log-Out</a></li>
+          <?php } else { ?>
             <li><a href="login.php">Log in</a></li>
             <li><a href="registro.php">Register</a></li>
             <li><a href="faq.php">FAQ</a></li>
+          <?php } ?>
           </ul>
         </div>
       </nav>

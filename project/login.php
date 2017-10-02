@@ -1,45 +1,34 @@
 <?php
-  var_dump ($_SESSION['logged']);
-
-  $user_cookie =
-
-  function estaLogueado() {
-    if (isset($_SESSION["usuario"])) {
-      return true;
-    }
-    return false;
-  }
-
-  $json = decode("/db/usuarios.json");
-
-  file_get_contents($json);
-
-  foreach ($variable as $key => $value) {
-        if($value["email"] == $_POST['email']) {
-          echo "existe";
-          password_verify()
-  }
-  }
-
-
-
-  $_SESSION["usuario"]
-
-  $_SESSION["usuario"] = $_COOKIE["usuario"]
-
-
-  $_COOKIE["usuario"]
-
 /*
+var_dump ($_SESSION['logged']);
+
+function estaLogueado() {
+if (isset($_SESSION["usuario"])) {
+return true;
+}
+return false;
+}
+decode("usuario");
+
+
+$_SESSION["usuario"]
+
+$_SESSION["usuario"] = $_COOKIE["usuario"]
+
+
+$_COOKIE["usuario"]
+
 PASOS A SEGUIR: POR NICO
 
 1 - Levantar todos los usuarios del json y convertirlos a array
 file get contents
 decode json
+
+
 2 - Revisar que el mail ingresado existe para seguir a validar la contraseña
 
 foreach ($variable as $key => $value) {
-  if($value["email"] == $mailpasadoporpost) {
+if($value["email"] == $mailpasadoporpost) {
 
 }
 }
@@ -56,10 +45,17 @@ NO SE OLVIDEN DE PONER SESSION_START() EN CADA PÁGINA
 6 - Checkear en cada página si la cookie existe y la session NO existe, si es así, volver a generar la session con los datos de la cookie
 
 7 - Botón de deslogueo
-  session_destroy()
-  setcookie("nombredecookie", "", time()-1);
+session_destroy()
+setcookie("nombredecookie", "", time()-1);
 */
+SESSION_START();
 
+if (isset($_SESSION['errores'])) {
+ $_SESSION["errores"] = null;
+}
+if (isset($_SESSION['inputsValues'])) {
+  $_SESSION['inputsValues'] = null;
+}
  ?>
 
 <!DOCTYPE html>
@@ -75,6 +71,17 @@ NO SE OLVIDEN DE PONER SESSION_START() EN CADA PÁGINA
     <link rel="stylesheet" href="css/login.css">
   </head>
   <body>
+    <?php if (!empty($_SESSION['error'])): ?>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-danger">
+                        <p><?php echo "El usuario no esta registrado"; ?></p>
+                </div>
+            </div>
+        </div>
+    <?php endif ?>
+
+
     <div class="contenedor">
       <nav class="navbar navbar-default">
         <div class="navbar-header">
@@ -83,9 +90,6 @@ NO SE OLVIDEN DE PONER SESSION_START() EN CADA PÁGINA
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <?php if (!empty($_SESSION['logged'])) { ?>
-            <a class="navbar-brand" href="#"> <?php echo $_SESSION['user'] ?> </a>
-          <?php } ?>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
@@ -111,16 +115,16 @@ NO SE OLVIDEN DE PONER SESSION_START() EN CADA PÁGINA
             </div>
           <div class="wrap">
               <p class="form-title">Sign In</p>
-            <form class="login">
-                <input type="text" placeholder="Email" />
-                <input type="password" placeholder="Password" />
+            <form class="login" method="post" action="controllers/login.controller.php">
+                <input type="text" name="email" placeholder="Email" />
+                <input type="password" name="password" placeholder="Password" />
                 <input type="submit" value="Sign In" class="btn btn-success btn-sm" />
               <div class="remember-forgot">
                 <div class="row">
                   <div class="col-md-6">
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" />Remember Me
+                        <input type="checkbox" name="remember" value="True" />Remember Me
                       </label>
                     </div>
                   </div>

@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (isset($_SESSION['error'])) {
+ $_SESSION["error"] = null;
+};
 
 $nombre = $_SESSION['inputsValues']['nombre'] ?? '';
 $email = $_SESSION['inputsValues']['email'] ?? '';
@@ -62,20 +65,20 @@ $password = $_SESSION['inputsValues']['password'] ?? '';
 
               <div class="form-group">
 
-                  <input type="text" class="form-control" placeholder="Nombre Completo" name="nombre" id="nombre" value="" />
+                  <input type="text" class="form-control" placeholder="Nombre Completo" name="nombre" id="nombre" value="<?php echo $nombre ?>" />
                   <span class="help-block"></span>
               </div>
 
               <div class="form-group">
 
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Email" value="" />
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Email" value="<?php echo $email ?>" />
                   <span class="help-block"></span>
               </div>
 
               <div class="form-group">
 
-                  <input type="password" class="form-control" name="password" placeholder="Contraseña" id="password" value="" />
-                  <span class="help-block"></span>
+                  <input type="password" class="form-control" name="password" placeholder="Contraseña" id="password" value="<?php echo $password ?>" />
+                  <span class="help-block" ></span>
               </div>
 
               <div class="form-group">

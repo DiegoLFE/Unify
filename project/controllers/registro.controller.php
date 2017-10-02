@@ -70,4 +70,4 @@ function guardarImagen($inputName, $imageName, $path)
 	}
 }
 
-header('Location: ../index.php');
+header('Location: ../login.php');
